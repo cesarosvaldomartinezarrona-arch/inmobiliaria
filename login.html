@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso al panel — Depas ZMG</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3628">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/styles/design-system.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+</head>
+<body class="auth-body" data-page="login">
+
+  <main class="auth">
+    <section class="auth__aside">
+      <img class="auth__photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80" alt="">
+      <div class="auth__veil" aria-hidden="true"></div>
+
+      <div class="auth__aside-inner">
+        <div class="auth__aside-top">
+          <a class="brand brand--light" href="index.html" aria-label="Depas ZMG, sitio público">
+            <img src="assets/logo.jpeg" alt="Logotipo Depas ZMG">
+            <span class="brand__text">
+              <span class="brand__name">Depas ZMG</span>
+              <span class="brand__sub">Inmobiliaria</span>
+            </span>
+          </a>
+        </div>
+
+        <div>
+          <span class="auth__eyebrow">Acceso restringido</span>
+          <h1 class="auth__title">Panel de <em>administración</em>.</h1>
+          <p class="auth__lead">
+            Gestión de propiedades, banners y publicación del sitio. Este espacio está reservado
+            para personal autorizado de Depas ZMG.
+          </p>
+
+          <ul class="auth__list">
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              Fichas con estado, etiqueta y precio
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              Banners con encabezado publicitario
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              Publicación inmediata en el sitio
+            </li>
+          </ul>
+        </div>
+
+        <div class="auth__aside-foot">
+          © 2026 Depas ZMG · Guadalajara, Jalisco
+        </div>
+      </div>
+    </section>
+
+    <section class="auth__panel">
+      <form class="auth__form" id="login-form" autocomplete="on">
+        <div class="auth__form-head">
+          <h2 class="auth__form-title">Inicia sesión</h2>
+          <p class="auth__form-sub">Usa las credenciales asignadas a tu cuenta.</p>
+        </div>
+
+        <div class="auth__notice" id="login-notice" role="alert" hidden></div>
+
+        <label class="admin-field">
+          <span class="admin-label">Usuario</span>
+          <input class="input" id="login-user" name="username" type="text" autocomplete="username"
+                 autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="admin" required>
+        </label>
+
+        <label class="admin-field">
+          <span class="admin-label">Contraseña</span>
+          <span class="auth__pass">
+            <input class="input" id="login-pass" name="password" type="password" autocomplete="current-password"
+                   placeholder="••••••••" required>
+            <button class="auth__eye" type="button" id="toggle-pass" aria-label="Mostrar contraseña">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.8"/></svg>
+            </button>
+          </span>
+        </label>
+
+        <button class="btn btn--primary btn--lg btn--block" type="submit" id="login-submit">
+          Entrar al panel
+        </button>
+
+        <p class="auth__hint">
+          La sesión se mantiene activa 8 horas en este navegador. Cierra sesión al terminar en
+          equipos compartidos.
+        </p>
+
+        <div class="auth__rule">Depas ZMG</div>
+
+        <a class="auth__back" href="index.html">Volver al sitio público</a>
+      </form>
+    </section>
+  </main>
+
+  <script src="src/js/auth.js"></script>
+</body>
+</html>

@@ -14,8 +14,31 @@
 
   <link rel="stylesheet" href="src/styles/design-system.css">
   <link rel="stylesheet" href="src/styles/components.css">
+
+  <script>
+    /* Guardia de acceso: sin sesión válida no se renderiza el panel. */
+    (function () {
+      var ok = false;
+      try {
+        var session = JSON.parse(sessionStorage.getItem('depas-zmg.auth.v2') || 'null');
+        ok = !!(session && session.exp && session.exp > Date.now());
+      } catch (err) {
+        ok = false;
+      }
+      if (!ok) {
+        location.replace('login.html?next=admin.html');
+        return;
+      }
+      document.documentElement.className += ' auth-pending';
+      setTimeout(function () {
+        if (!document.documentElement.classList.contains('auth-ok')) {
+          location.replace('login.html?next=admin.html');
+        }
+      }, 6000);
+    })();
+  </script>
 </head>
-<body class="admin-body">
+<body class="admin-body" data-page="admin">
 
 <div class="admin" id="admin">
   <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Cerrar menú"></button>
@@ -70,6 +93,10 @@
         </span>
       </div>
       <button class="btn btn--outline btn--sm btn--block" type="button" id="reset-data">Restablecer datos de prueba</button>
+      <button class="btn btn--ghost btn--sm btn--block" type="button" id="logout-btn">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h4a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 18 20h-4"/><path d="M10 8l-4 4 4 4"/><path d="M6 12h9"/></svg>
+        Cerrar sesión
+      </button>
     </div>
   </aside>
 
@@ -455,6 +482,7 @@
 <div class="toast-stack" id="toasts" aria-live="polite"></div>
 
 <script src="src/js/store.js"></script>
+<script src="src/js/auth.js"></script>
 <script src="src/js/admin.js"></script>
 </body>
 </html>
