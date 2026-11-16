@@ -1,0 +1,159 @@
+/* Tarjeta de propiedad - reusable component */
+.property-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: var(--transition-fast);
+  margin-bottom: var(--spacing-lg);
+}
+
+.property-card:hover {
+  border-color: var(--color-accent-sophisticated);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.property-card__image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.property-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.property-card:hover .property-card__image {
+  transform: scale(1.05);
+}
+
+.property-card__body {
+  padding: var(--spacing-lg);
+}
+
+.property-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-carbon-black);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-tight);
+}
+
+.property-card__location {
+  font-size: var(--font-size-sm);
+  color: var(--color-carbon-black);
+  opacity: 0.7;
+  margin-bottom: var(--spacing-md);
+}
+
+.property-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs) var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.property-card__feature {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-carbon-black);
+  opacity: 0.7;
+  padding: 2px 6px;
+  background-color: var(--color-stone-light);
+  border-radius: var(--border-radius-sm);
+}
+
+.property-card__feature-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--color-discrete-green);
+  flex-shrink: 0;
+}
+
+.property-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.property-card__price {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  color: var(--color-accent-sophisticated);
+  font-weight: var(--font-weight-bold);
+}
+
+.property-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.property-card__status--available {
+  color: var(--color-discrete-green);
+}
+
+.property-card__status--sold {
+  color: var(--color-alert-important);
+}
+
+.property-card__status--rent {
+  color: var(--color-accent-sophisticated);
+}
+
+/* Variante compacta */
+.property-card--compact {
+  border-radius: var(--border-radius-sm);
+}
+
+.property-card--compact .property-card__image-wrapper {
+  height: 120px;
+}
+
+.property-card--compact .property-card__body {
+  padding: var(--spacing-md);
+}
+
+/* Variante con badges superpuestos */
+.property-card__badges {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.property-card__badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--border-radius-sm);
+}
+
+.property-card__badge--offer {
+  background-color: var(--color-discrete-green);
+  color: var(--color-carbon-black);
+}
+
+.property-card__badge--urgent {
+  background-color: var(--color-alert-important);
+  color: var(--color-warm-white);
+}
+
+.property-card__badge--highlighted {
+  background-color: var(--color-accent-sophisticated);
+  color: var(--color-warm-white);
+}
