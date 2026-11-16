@@ -3,598 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Inmobiliaria Premium - Dimorakot Style - Propiedades en renta y venta">
-  <meta name="keywords" content="inmobiliaria, propiedades, renta, venta, dimorakot, real estate">
-  <meta name="author" content="Proyecto Inmobiliario">
+  <title>Depas ZMG — Inmobiliaria en Guadalajara</title>
+  <meta name="description" content="Casas, departamentos y villas seleccionadas en Guadalajara, Zapopan, Tlaquepaque y Puerto Vallarta. Asesoría inmobiliaria personalizada.">
+  <meta name="theme-color" content="#FAF8F3">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Fonts dimorakot: Outfit + DM Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  
-  <title>Inmobiliaria Premium - Dimorakot Style</title>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="src/styles/variables.css">
-  <link rel="stylesheet" href="src/styles/base.css">
-  <link rel="stylesheet" href="src/components/ui/button.css">
-  <link rel="stylesheet" href="src/components/ui/card.css">
-  <link rel="stylesheet" href="src/components/ui/input.css">
-  <link rel="stylesheet" href="src/components/ui/nav.css">
-  <link rel="stylesheet" href="src/components/ui/avatar.css">
-  <link rel="stylesheet" href="src/components/dashboard/dashboard.css">
-  <link rel="stylesheet" href="src/components/banner/banner-manager.css">
-  <link rel="stylesheet" href="src/components/public/public-page.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/styles/design-system.css">
+  <link rel="stylesheet" href="src/styles/components.css">
 </head>
 <body>
 
-  <!-- Navigation Superior - estilo dimorakot -->
-  <nav id="mainNav" class="nav">
+  <div id="promo-slot"></div>
+
+  <header class="site-header">
     <div class="container">
-      <div class="h-16 flex items-center justify-between">
-        
-        <!-- Logo -->
-        <a href="https://dimorakot.com" class="flex items-center gap-2">
-          <img src="../logo.jpeg" alt="Inmobiliaria Premium" class="h-8 w-auto">
-          <span class="font-display font-extrabold text-xl tracking-tight text-primary hidden">DIMORA<span class="text-slate-300 font-bold">KOT</span></span>
+      <nav class="nav" aria-label="Principal">
+        <a class="brand" href="index.html" aria-label="Depas ZMG, inicio">
+          <img src="assets/logo.jpeg" alt="Logotipo Depas ZMG">
+          <span class="brand__text">
+            <span class="brand__name">Depas ZMG</span>
+            <span class="brand__sub">Inmobiliaria</span>
+          </span>
         </a>
 
-        <!-- Links navigation -->
-        <div class="hidden md:flex items-center gap-1 bg-slate-50 rounded-full px-1 py-1">
-          <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-900 shadow-sm">Todo</a>
-          <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all text-slate-500 hover:text-slate-700">Rentas</a>
-          <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all text-slate-500 hover:text-slate-700">Ventas</a>
+        <div class="nav-links">
+          <a href="#coleccion">Propiedades</a>
+          <a href="#zonas">Zonas</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
         </div>
 
-        <!-- Actions -->
-        <div class="flex items-center gap-2">
-          <a href="#" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary hover:bg-slate-50 rounded-full transition-colors">
-            Publica tu propiedad
+        <div class="nav-actions">
+          <a class="nav-phone" href="tel:+524792761205">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h3l1.5 4-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2 4 1.5v3A2.5 2.5 0 0 1 17.5 20C10.6 19.4 4.6 13.4 4 6.5A2.5 2.5 0 0 1 6.5 4Z"/></svg>
+            479 276 1205
           </a>
-          <a href="#" class="inline-flex items-center gap-2 pl-3 py-2 border border-primary rounded-full text-sm font-medium text-primary hover:bg-primary-100 transition-colors" id="admin-nav-link">
-            <span class="material-symbols-outlined">admin_panel_settings</span>
-            <span>Panel Admin</span>
+          <a class="btn btn--outline btn--sm btn--admin" href="admin.html">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            Panel admin
           </a>
-          <a href="#" class="inline-flex items-center gap-2 pl-3 py-2 border border-slate-200 rounded-full text-sm font-medium text-slate-600 hover:shadow-md hover:border-slate-300 transition-all">
-            <span class="material-symbols-outlined text-lg">menu</span>
-            <span class="material-symbols-outlined filled text-lg text-slate-400">account_circle</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Contenedor principal -->
-  <div class="natural-transition">
-    
-    <!-- Página Pública -->
-    <div class="public-page" id="public-page">
-      
-      <!-- Hero / Header principal -->
-      <header class="header-public" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80');">
-        <div class="header-public__container">
-          <span class="badge-venta">En Renta</span>
-          <h1 class="header-public__heading">
-            <span class="font-display">Encuentra tu</span>
-            <span class="text-primary font-display">hogar ideal</span>
-          </h1>
-          <p class="header-public__subtitle">Más de 500 propiedades disponibles en las mejores locaciones. Tu próximo hogar te espera.</p>
-          
-          <div class="header-public__stats">
-            <div class="header-public__stat"><span class="header-public__stat-value font-display">128</span> Propiedades</div>
-            <div class="header-public__stat"><span class="header-public__stat-value font-display">89</span> Disponibles</div>
-          </div>
-          
-          <a href="#propiedades" class="btn btn-accent">Ver Propiedades</a>
-        </div>
-      </header>
-
-      <!-- Buscador -->
-      <section class="search-public">
-        <form class="search-public__form" action="#">
-          <input class="search-public__input" type="text" placeholder="Ciudad, barrio o palabra clave" aria-label="Buscar propiedades">
-          <button class="search-public__btn" type="submit">Buscar</button>
-        </form>
-      </section>
-
-      <!-- Carrusel de propiedades -->
-      <section class="properties-carousel">
-        <div class="carousel__track" id="carousel-track">
-          <!-- Contenido insertado por JS -->
-        </div>
-      </section>
-
-      <!-- Sección de propiedades -->
-      <section class="properties-section" id="propiedades">
-        <h2 class="properties-section__title">Propiedades Destacadas</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="properties-grid">
-          <!-- Tarjetas insertadas por JS -->
-        </div>
-      </section>
-
-      <!-- Sidebar fijo -->
-      <aside class="sidebar-sticky">
-        <div class="price-info">
-          <span class="price-info__label">Renta mensual</span>
-          <span class="price-info__value font-display">$38,500</span>
-          <span class="/mes">/mes</span>
-        </div>
-        
-        <div class="contact-form">
-          <input class="contact-form__input" type="text" placeholder="Tu nombre" aria-label="Nombre">
-          <input class="contact-form__input" type="tel" placeholder="Teléfono" aria-label="Teléfono">
-          <button class="contact-form__btn btn-primary">Enviar mensaje</button>
-        </div>
-      </aside>
-
-      <!-- Footer -->
-      <footer class="page-footer">
-        <div class="page-footer__container">
-          <div class="page-footer__links">
-            <a href="#" class="page-footer__link">Inicio</a>
-            <a href="#" class="page-footer__link">Nosotros</a>
-            <a href="#" class="page-footer__link">Contacto</a>
-            <a href="#" class="page-footer__link">Blog</a>
-          </div>
-          <p class="page-footer__copy">© 2026 Inmobiliaria Premium. Todos los derechos reservados.</p>
-        </div>
-      </footer>
-
-    </div>
-
-    <!-- Dashboard Administrador -->
-    <div class="dashboard-main" id="dashboard">
-      <!-- Header navegación -->
-      <nav class="nav--scrolled">
-        <div class="container">
-          <div class="h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2">
-              <span class="font-display font-extrabold text-xl tracking-tight text-primary">DIMORA<span class="text-slate-300 font-bold">KOT</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-1 bg-slate-50 rounded-full px-1 py-1">
-              <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-900 shadow-sm">Todo</a>
-              <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all text-slate-500 hover:text-slate-700">Rentas</a>
-              <a href="#" class="px-3 py-2 rounded-full text-sm font-medium transition-all text-slate-500 hover:text-slate-700">Ventas</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <a href="#" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary hover:bg-slate-50 rounded-full transition-colors">Panel</a>
-              <a href="#" class="inline-flex items-center gap-2 pl-3 py-2 border border-slate-200 rounded-full text-sm font-medium text-slate-600 hover:shadow-md hover:border-slate-300 transition-all">
-                <span class="material-symbols-outlined text-lg">menu</span>
-                <span class="material-symbols-outlined filled text-lg text-slate-400">account_circle</span>
-              </a>
-            </div>
-          </div>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
         </div>
       </nav>
-
-      <!-- Bienvenida -->
-      <section class="welcome-section">
-        <h2 class="welcome-section__greeting">Bienvenido, <span class="welcome-section__admin-name">Administrador</span></h2>
-        <p>Gestiona tu inmobiliaria profesional</p>
-      </section>
-
-      <!-- Resumen actividad -->
-      <section class="activity-summary">
-        <div class="summary-card">
-          <div class="summary-card__number" id="summary-total-properties">128</div>
-          <div class="summary-card__label">Propiedades Totales</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card__number" id="summary-available">89</div>
-          <div class="summary-card__label">Disponibles</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card__number" id="summary-sold">23</div>
-          <div class="summary-card__label">Vendidas</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card__number" id="summary-rent">16</div>
-          <div class="summary-card__label">En Renta</div>
-        </div>
-      </section>
-
-      <!-- Indicadores -->
-      <section class="properties-indicators">
-        <div class="properties-indicators__filter">
-          <button class="properties-indicators__filter-btn properties-indicators__filter-btn--active" data-filter="all">Todo</button>
-          <button class="properties-indicators__filter-btn" data-filter="available">Disponible</button>
-          <button class="properties-indicators__filter-btn" data-filter="sold">Vendida</button>
-          <button class="properties-indicators__filter-btn" data-filter="rent">En Renta</button>
-        </div>
-
-        <table class="properties-table">
-          <thead>
-            <tr>
-              <th>Propiedad</th>
-              <th>Precio</th>
-              <th>Estado</th>
-              <th>Ubicación</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Casa en Miami Beach</td>
-              <td>$2,500,000</td>
-              <td><span class="badge badge--rent">Renta</span></td>
-              <td>Miami Beach</td>
-              <td><button class="btn btn-primary">Ver</button></td>
-            </tr>
-            <tr>
-              <td>Departamento Madrid</td>
-              <td>$450,000</td>
-              <td><span class="badge badge--sold">Vendida</span></td>
-              <td>Madrid</td>
-              <td><button class="btn btn-secondary">Ver</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- Publicaciones destacadas -->
-      <section class="highlighted-publications">
-        <h3 class="highlighted-publications__title">Publicaciones Destacadas</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <article class="publication-card">
-            <div class="publication-card__info">
-              <h4 class="publication-card__title">Villa frente al mar</h4>
-              <p class="publication-card__meta">Publicado: 15 de enero | 4 habitaciones</p>
-            </div>
-            <div>
-              <span class="publication-card__badge badge badge--rent">Renta</span>
-            </div>
-            <div class="publication-card__actions">
-              <button class="btn btn-secondary">Editar</button>
-              <button class="btn btn-accent">Publicar</button>
-            </div>
-          </article>
-          <article class="publication-card">
-            <div class="publication-card__info">
-              <h4 class="publication-card__title">Departamento en el centro</h4>
-              <p class="publication-card__meta">Publicado: 12 de enero | 2 habitaciones</p>
-            </div>
-            <div>
-              <span class="publication-card__badge badge badge--urgent">Urgente</span>
-            </div>
-            <div class="publication-card__actions">
-              <button class="btn btn-secondary">Editar</button>
-              <button class="btn btn-accent">Publicar</button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Actividad administrativa -->
-      <section class="admin-activity">
-        <h3 class="admin-activity__title">Actividad Administrativa</h3>
-        <div class="admin-activity__item">
-          <div class="activity-item__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 3l2 14 2-14 3 9h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5l2-10z"/>
-            </svg>
-          </div>
-          <div class="activity-item__details">
-            <span>Nueva propiedad agregada</span>
-            <span class="activity-item__timestamp">hace 10 minutos</span>
-          </div>
-        </div>
-        <div class="admin-activity__item">
-          <div class="activity-item__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/><path d="M18 20v-7"/>
-            </svg>
-          </div>
-          <div class="activity-item__details">
-            <span>Banner publicado exitosamente</span>
-            <span class="activity-item__timestamp">hace 25 minutos</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Accesos rápidos -->
-      <section class="quick-actions">
-        <h3 class="quick-actions__title">Accesos Rápidos</h3>
-        <div class="quick-actions__grid">
-          <article class="quick-action-card">
-            <div class="quick-action-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12h14"/>
-              </svg>
-            </div>
-            <h4 class="quick-action-card__title">Agregar Propiedad</h4>
-            <div class="quick-action-card__count">+12</div>
-          </article>
-          <article class="quick-action-card">
-            <div class="quick-action-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
-              </svg>
-            </div>
-            <h4 class="quick-action-card__title">Publicar Banners</h4>
-            <div class="quick-action-card__count">+5</div>
-          </article>
-        </div>
-      </section>
-
-      <!-- FAB -->
-      <button class="fab" aria-label="Agregar nueva propiedad">
-        +
-      </button>
     </div>
 
-    <!-- Administrador de Banners -->
-    <div class="banner-manager" id="banner-manager">
-      <div class="banner-manager__header">
-        <h2 class="banner-manager__header-title">Administrador de Banners</h2>
-        <p class="banner-manager__subtitle">Gestiona los banners destacados de tu plataforma</p>
+    <div class="mobile-panel">
+      <a href="#coleccion">Propiedades</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="admin.html">Panel administrador</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="eyebrow">Inmobiliaria · Guadalajara y Zapopan</span>
+            <h1 class="hero__title">Espacios que se sienten <em>como casa</em>.</h1>
+            <p class="hero__lead">
+              Una colección breve y cuidada de propiedades residenciales en Guadalajara. Visitamos
+              cada casa antes de publicarla, para que lo que ves en pantalla sea lo que encuentras al
+              abrir la puerta.
+            </p>
+
+            <form class="search-card" id="search-form" role="search">
+              <div class="search-tabs" role="tablist" aria-label="Tipo de operación">
+                <button class="search-tab is-active" type="button" data-op="venta" role="tab" aria-selected="true">Comprar</button>
+                <button class="search-tab" type="button" data-op="renta" role="tab" aria-selected="false">Rentar</button>
+              </div>
+              <div class="search-body">
+                <div class="search-fields">
+                  <label class="field">
+                    <span class="field__label">Ubicación</span>
+                    <input class="field__control" id="search-q" type="text" placeholder="Ciudad, colonia o clave" autocomplete="off">
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Tipo</span>
+                    <select class="field__control" id="search-type">
+                      <option value="todas">Todos</option>
+                      <option value="Casa">Casa</option>
+                      <option value="Departamento">Departamento</option>
+                      <option value="Loft">Loft</option>
+                      <option value="Penthouse">Penthouse</option>
+                      <option value="Villa">Villa</option>
+                    </select>
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Presupuesto</span>
+                    <select class="field__control" id="search-budget"></select>
+                  </label>
+                </div>
+                <div class="search-actions">
+                  <span class="search-hint">Respuesta de un asesor en <strong>menos de 24 h</strong></span>
+                  <button class="btn btn--primary" type="submit">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+                    Buscar propiedades
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="hero__media">
+            <div class="hero__media-frame">
+              <span class="hero__media-label">Colección 2026</span>
+              <img id="hero-media" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Residencia contemporánea con jardín">
+            </div>
+            <div class="hero__float" id="hero-float"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-strip__grid">
+          <div class="stat-cell">
+            <span class="stat-cell__value">08</span>
+            <span class="stat-cell__label">Propiedades activas</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__value">05</span>
+            <span class="stat-cell__label">Zonas</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__value">214</span>
+            <span class="stat-cell__label">Operaciones cerradas</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__value">98%</span>
+            <span class="stat-cell__label">Clientes que recomiendan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLECCIÓN -->
+    <section class="section" id="coleccion">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Colección</span>
+            <h2 class="section-head__title">Propiedades disponibles</h2>
+            <p class="section-head__desc">
+              Seleccionadas por ubicación, estado de conservación y luz. Cada ficha incluye lo que
+              necesitas saber antes de agendar una visita.
+            </p>
+          </div>
+          <div class="chips" role="group" aria-label="Filtrar propiedades">
+            <button class="chip is-active" type="button" data-filter="todas">Todas</button>
+            <button class="chip" type="button" data-filter="venta">Venta</button>
+            <button class="chip" type="button" data-filter="renta">Renta</button>
+            <button class="chip" type="button" data-filter="oferta">Ofertas</button>
+          </div>
+        </div>
+
+        <div class="section-head reveal" style="margin-bottom:1.25rem;align-items:center">
+          <p class="search-hint" style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)">
+            <span id="listing-count">8 propiedades</span>
+          </p>
+          <a class="section-head__link" href="#contacto">
+            ¿No encuentras lo que buscas?
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="listing-grid" id="listing-grid"></div>
+      </div>
+    </section>
+
+    <!-- ZONAS -->
+    <section class="section section--tight" id="zonas">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Dónde trabajamos</span>
+            <h2 class="section-head__title">Cinco lugares, cinco formas de vivir</h2>
+          </div>
+          <a class="section-head__link" href="#contacto">
+            Solicitar catálogo por zona
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="zones reveal">
+          <a class="zone zone--tall" href="#coleccion">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Casa contemporánea en Zapopan" loading="lazy">
+            <div class="zone__content">
+              <div class="zone__name">Zapopan</div>
+              <div class="zone__count">5 propiedades · desde $8.4 M</div>
+            </div>
+          </a>
+          <a class="zone" href="#coleccion">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Casa en Providencia" loading="lazy">
+            <div class="zone__content">
+              <div class="zone__name">Providencia</div>
+              <div class="zone__count">1 propiedad</div>
+            </div>
+          </a>
+          <a class="zone" href="#coleccion">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Residencia en Chapalita" loading="lazy">
+            <div class="zone__content">
+              <div class="zone__name">Chapalita</div>
+              <div class="zone__count">1 propiedad</div>
+            </div>
+          </a>
+          <a class="zone" href="#coleccion">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Casa en Guadalajara Centro" loading="lazy">
+            <div class="zone__content">
+              <div class="zone__name">Guadalajara Centro</div>
+              <div class="zone__count">2 propiedades</div>
+            </div>
+          </a>
+          <a class="zone" href="#coleccion">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Villa en Puerto Vallarta" loading="lazy">
+            <div class="zone__content">
+              <div class="zone__name">Puerto Vallarta</div>
+              <div class="zone__count">1 propiedad</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="split">
+          <div class="split__aside reveal">
+            <span class="eyebrow">Cómo trabajamos</span>
+            <h2 class="split__title">Menos propiedades. Más atención.</h2>
+            <p class="split__lead">
+              No manejamos inventario masivo. Preferimos conocer cada propiedad a fondo y acompañarte
+              en todo el proceso, desde la primera visita hasta la firma.
+            </p>
+            <a class="btn btn--outline split__link" href="#contacto">
+              Agendar una llamada
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="value-list reveal">
+            <article class="value-item">
+              <span class="value-item__num">01</span>
+              <div>
+                <h3 class="value-item__title">Conversación inicial</h3>
+                <p class="value-item__text">
+                  Definimos zona, presupuesto y prioridades reales: luz, escuela, transporte o
+                  plusvalía. Sin listas interminables.
+                </p>
+              </div>
+            </article>
+            <article class="value-item">
+              <span class="value-item__num">02</span>
+              <div>
+                <h3 class="value-item__title">Curaduría de opciones</h3>
+                <p class="value-item__text">
+                  Visitamos y verificamos cada propiedad antes de mostrártela. Recibes entre tres y
+                  cinco opciones que realmente encajan.
+                </p>
+              </div>
+            </article>
+            <article class="value-item">
+              <span class="value-item__num">03</span>
+              <div>
+                <h3 class="value-item__title">Visitas acompañadas</h3>
+                <p class="value-item__text">
+                  Recorremos contigo, revisamos mantenimiento, orientación, ruido y documentación.
+                  Preguntamos lo que no está en la ficha.
+                </p>
+              </div>
+            </article>
+            <article class="value-item">
+              <span class="value-item__num">04</span>
+              <div>
+                <h3 class="value-item__title">Cierre y seguimiento</h3>
+                <p class="value-item__text">
+                  Coordinamos notaría, crédito y entrega. Después del cierre seguimos disponibles para
+                  mudanza, servicios y mejoras.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight" id="contacto">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-band__body">
+            <span class="eyebrow">Hablemos</span>
+            <h2 class="cta-band__title">¿Tienes una propiedad para vender o rentar?</h2>
+            <p class="cta-band__text">
+              Preparamos la ficha, la sesión de fotos y la estrategia de publicación. Sin costo hasta
+              concretar la operación.
+            </p>
+            <div class="cta-band__actions">
+              <a class="btn btn--copper btn--lg" href="https://wa.me/524792761205?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.6A7.8 7.8 0 0 1 8.4 18.5L4 20l1.5-4.3A7.8 7.8 0 1 1 20 11.6Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+                Escribir por WhatsApp
+              </a>
+              <a class="btn btn--outline btn--lg" href="tel:+524792761205">Llamar 479 276 1205</a>
+            </div>
+          </div>
+          <div class="cta-band__media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="Interior de una residencia" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Depas ZMG, inicio">
+            <img src="assets/logo.jpeg" alt="Logotipo Depas ZMG">
+            <span class="brand__text">
+              <span class="brand__name">Depas ZMG</span>
+              <span class="brand__sub">Inmobiliaria</span>
+            </span>
+          </a>
+          <p class="footer-brand__desc">
+            Asesoría inmobiliaria residencial en Guadalajara y Zapopan. Propiedades verificadas y
+            acompañamiento de principio a fin.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col__title">Propiedades</div>
+          <a href="#coleccion">En venta</a>
+          <a href="#coleccion">En renta</a>
+          <a href="#coleccion">Ofertas</a>
+          <a href="#zonas">Zonas</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col__title">Inmobiliaria</div>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#nosotros">Cómo trabajamos</a>
+          <a href="#contacto">Contacto</a>
+          <a href="admin.html">Panel administrador</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col__title">Contacto</div>
+          <div class="footer-contact__item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h3l1.5 4-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2 4 1.5v3A2.5 2.5 0 0 1 17.5 20C10.6 19.4 4.6 13.4 4 6.5A2.5 2.5 0 0 1 6.5 4Z"/></svg>
+            <a href="tel:+524792761205">+52 479 276 1205</a>
+          </div>
+          <div class="footer-contact__item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <a href="mailto:contacto@depaszmg.com">contacto@depaszmg.com</a>
+          </div>
+          <div class="footer-contact__item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Av. Américas 1500, Guadalajara, Jal.</span>
+          </div>
+          <div class="footer-contact__item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            <span>Lun – Vie · 9:00 a 19:00</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Sección: Añadir Nuevo Banner -->
-      <section class="banner-form">
-        <div class="banner-form__section">
-          <span class="banner-form__section-title">Nuevo Banner</span>
-          <div class="banner-form__field">
-            <label class="banner-form__label" for="banner-title">Título</label>
-            <input class="banner-form__input" type="text" id="banner-title" placeholder="Título de la campaña">
-          </div>
-          <div class="banner-form__field">
-            <label class="banner-form__label">Prioridad</label>
-            <select class="banner-form__select" id="banner-priority">
-              <option value="normal">Normal</option>
-              <option value="urgent">Urgente</option>
-              <option value="featured">Destacado</option>
-            </select>
-          </div>
-          <div class="banner-form__field">
-            <label class="banner-form__label">Estado</label>
-            <div class="banner-status-badges">
-              <span class="banner-status-badge banner-status-badge--active" data-state="active">Activo</span>
-              <span class="banner-status-badge banner-status-badge--inactive" data-state="inactive">Inactivo</span>
-            </div>
-          </div>
-          <div class="banner-form__field">
-            <label class="banner-form__label">Tipo</label>
-            <select class="banner-form__select" id="banner-type">
-              <option value="general">General</option>
-              <option value="offer">Oferta</option>
-              <option value="urgent">Urgente</option>
-              <option value="featured">Destacado</option>
-            </select>
-          </div>
-          <div class="banner-form__field">
-            <label class="banner-form__label">Para Encabezado</label>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="banner-for-header" checked>
-              <label class="form-check-label" for="banner-for-header">
-                Mostrar en encabezado principal
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="banner-form__section">
-          <span class="banner-form__section-title">Imagen</span>
-          <div class="banner-form__field">
-            <label class="banner-form__label">Imagen del Banner</label>
-            <input class="banner-form__input banner-manager__preview-image" id="banner-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Banner" loading="lazy">
-          </div>
-        </div>
-        <button class="btn btn-accent w-100" type="button" aria-label="Crear nuevo banner">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Crear Banner
-        </button>
-      </section>
-
-      <div class="banner-gallery" id="banner-gallery">
-        <!-- Tarjetas de banner -->
-        <article class="banner-card" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80');">
-          <div class="banner-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Banner verano" class="banner-card__image" loading="lazy">
-            <div class="banner-card__highlight-badge">
-              <span class="material-symbols-outlined">tips_and_updates</span>
-              <span>Para Encabezado</span>
-            </div>
-          </div>
-          <div class="banner-card__info">
-            <h4 class="banner-card__title">Verano 2026</h4>
-            <p class="banner-card__subtitle">Hasta 30% de descuento en propiedades</p>
-          </div>
-          <div class="banner-card__toggle">
-            <label class="toggle-switch">
-              <input type="checkbox" class="toggle-switch-input" checked>
-              <span class="toggle-switch-slider"></span>
-            </label>
-          </div>
-        </article>
-        <article class="banner-card">
-          <div class="banner-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1613443611439-2f0e7e0f245c?w=800&q=80" alt="Nuevas propiedades" class="banner-card__image" loading="lazy">
-            <div class="banner-card__highlight-badge" style="display:none;">
-              <span class="material-symbols-outlined">tips_and_updates</span>
-              <span>Para Encabezado</span>
-            </div>
-          </div>
-          <div class="banner-card__info">
-            <h4 class="banner-card__title">Nuevas Propiedades</h4>
-            <p class="banner-card__subtitle">50 propiedades recién añadidas</p>
-          </div>
-          <div class="banner-card__toggle">
-            <label class="toggle-switch">
-              <input type="checkbox" class="toggle-switch-input">
-              <span class="toggle-switch-slider"></span>
-            </label>
-          </div>
-        </article>
-        <article class="banner-card">
-          <div class="banner-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1601426526298-8f5a71408835?w=800&q=80" alt="Invierno" class="banner-card__image" loading="lazy">
-            <div class="banner-card__highlight-badge">
-              <span class="material-symbols-outlined">tips_and_updates</span>
-              <span>Para Encabezado</span>
-            </div>
-          </div>
-          <div class="banner-card__info">
-            <h4 class="banner-card__title">Invierno</h4>
-            <p class="banner-card__subtitle">Propiedades exclusivas de invierno</p>
-          </div>
-          <div class="banner-card__toggle">
-            <label class="toggle-switch">
-              <input type="checkbox" class="toggle-switch-input" checked>
-              <span class="toggle-switch-slider"></span>
-            </label>
-          </div>
-        </article>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Depas ZMG Inmobiliaria. Todos los derechos reservados.</span>
+        <span>
+          <a href="#">Aviso de privacidad</a> · <a href="#">Términos</a> ·
+          <a href="admin.html">Acceso administrador</a>
+        </span>
       </div>
     </div>
+  </footer>
 
-  </div>
-
-  <script>
-    // Inicialización
-    document.addEventListener('DOMContentLoaded', function() {
-      // Panel de Administración toggle
-      const adminNavLink = document.getElementById('admin-nav-link');
-      const publicPage = document.getElementById('public-page');
-      const dashboardSection = document.querySelector('.dashboard-main');
-      
-      if (adminNavLink && publicPage && dashboardSection) {
-        let isAdminMode = false;
-        
-        adminNavLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          isAdminMode = !isAdminMode;
-          
-          if (isAdminMode) {
-            publicPage.style.display = 'none';
-            dashboardSection.style.display = 'block';
-            adminNavLink.innerHTML = `
-              <span class="material-symbols-outlined">tips_and_updates</span>
-              <span>Modo Público</span>
-            `;
-            adminNavLink.style.borderColor = 'var(--color-accent-blue)';
-            adminNavLink.style.color = 'var(--color-accent-blue)';
-          } else {
-            publicPage.style.display = 'block';
-            dashboardSection.style.display = 'none';
-            adminNavLink.innerHTML = `
-              <span class="material-symbols-outlined">admin_panel_settings</span>
-              <span>Panel Admin</span>
-            `;
-            adminNavLink.style.borderColor = 'var(--color-primary)';
-            adminNavLink.style.color = 'var(--color-primary)';
-          }
-        });
-      }
-      
-      // Inicializar carousel
-      const carouselTrack = document.getElementById('carousel-track');
-      if (carouselTrack) {
-        const carouselProperties = [
-          {
-            image: 'https://images.unsplash.com/photo-1600607687333-ce6a7e8044f1?w=800&q=80',
-            title: 'Casa de Lujo en Miami',
-            meta: '3 habitaciones | 2 baños | $2,500,000',
-            price: '$2.5M'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1613443611439-2f0e7e0f245c?w=800&q=80',
-            title: 'Departamento Moderno',
-            meta: '2 habitaciones | 1 baño | $890,000',
-            price: '$890k'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1601426526298-8f5a71408835?w=800&q=80',
-            title: 'Terreno en Santo Domingo',
-            meta: '500 m² | Zona residencial',
-            price: 'Consultar'
-          }
-        ];
-
-        carouselProperties.forEach(prop => {
-          const card = document.createElement('div');
-          card.className = 'carousel__item';
-          card.innerHTML = `
-            <img src="${prop.image}" alt="${prop.title}" class="carousel__image" loading="lazy">
-            <div class="carousel__content">
-              <h4 class="carousel__title">${prop.title}</h4>
-              <p class="carousel__meta">${prop.meta}</p>
-              <p class="carousel__price">${prop.price}</p>
-            </div>
-          `;
-          carouselTrack.appendChild(card);
-        });
-      }
-
-      // Inicializar grid de propiedades
-      const propertiesGrid = document.getElementById('properties-grid');
-      if (propertiesGrid) {
-        const properties = [
-          {
-            image: 'https://images.unsplash.com/photo-1600607687333-ce6a7e8044f1?w=600&q=80',
-            title: 'Casa de Lujo en Miami Beach',
-            location: 'Miami Beach, FL',
-            features: ['Piscina', 'Jardín', '4 habitaciones'],
-            price: '$2,500,000',
-            status: 'Disponible'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1613443611439-2f0e7e0f245c?w=600&q=80',
-            title: 'Departamento Moderno en Madrid',
-            location: 'Madrid, España',
-            features: ['Balcon', 'Gimnasio', '2 habitaciones'],
-            price: '$450,000',
-            status: 'Disponible'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1601426526298-8f5a71408835?w=600&q=80',
-            title: 'Terreno en Santo Domingo',
-            location: 'Santo Domingo, RD',
-            features: ['Plano', 'Urbanizar', '500 m²'],
-            price: '$350,000',
-            status: 'Destacado'
-          }
-        ];
-
-        propertiesGrid.innerHTML = properties.map(prop => `
-          <article class="property-card">
-            <div class="property-card__image-wrapper">
-              <img src="${prop.image}" alt="${prop.title}" class="property-card__image" loading="lazy">
-              <div class="property-card__overlay"></div>
-              <span class="property-card__badge badge badge--rent">Renta</span>
-            </div>
-            <div class="property-card__body">
-              <h3 class="property-card__title">${prop.title}</h3>
-              <p class="property-card__location">${prop.location}</p>
-              <div class="property-card__features">
-                ${prop.features.map(feature => `<span class="property-card__feature"><span class="property-card__feature-icon">✓</span>${feature}</span>`).join('')}
-              </div>
-              <div class="property-card__footer">
-                <div class="property-card__price">${prop.price}</div>
-                <span class="property-card__status badge badge--rent">Renta</span>
-              </div>
-            </div>
-          </article>
-        `).join('');
-      }
-
-      // Avatar init
-      const avatars = document.querySelectorAll('.avatar');
-      avatars.forEach(avatar => {
-        avatar.style.backgroundColor = 'var(--color-primary-dark)';
-        avatar.style.color = 'var(--color-bg-primary)';
-      });
-
-      // WhatsApp CTA
-      const whatsappCTA = document.querySelector('.whatsapp-cta');
-      if (whatsappCTA) {
-        whatsappCTA.addEventListener('click', function() {
-          const phone = '524792761205';
-          const text = 'Hola, me interesa la propiedad';
-          window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
-        });
-      }
-    });
-  </script>
+  <script src="src/js/store.js"></script>
+  <script src="src/js/public.js"></script>
 </body>
 </html>

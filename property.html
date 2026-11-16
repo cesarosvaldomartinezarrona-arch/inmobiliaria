@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de propiedad — Depas ZMG</title>
+  <meta name="description" content="Detalle de propiedad: fotografías, especificaciones, amenidades y contacto directo con un asesor de Depas ZMG.">
+  <meta name="theme-color" content="#FAF8F3">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/styles/design-system.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Principal">
+        <a class="brand" href="index.html" aria-label="Depas ZMG, inicio">
+          <img src="assets/logo.jpeg" alt="Logotipo Depas ZMG">
+          <span class="brand__text">
+            <span class="brand__name">Depas ZMG</span>
+            <span class="brand__sub">Inmobiliaria</span>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#coleccion">Propiedades</a>
+          <a href="index.html#zonas">Zonas</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="nav-phone" href="tel:+524792761205">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h3l1.5 4-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2 4 1.5v3A2.5 2.5 0 0 1 17.5 20C10.6 19.4 4.6 13.4 4 6.5A2.5 2.5 0 0 1 6.5 4Z"/></svg>
+            479 276 1205
+          </a>
+          <a class="btn btn--outline btn--sm btn--admin" href="admin.html">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            Panel admin
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-panel">
+      <a href="index.html#coleccion">Propiedades</a>
+      <a href="index.html#zonas">Zonas</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="admin.html">Panel administrador</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-intro" style="padding-bottom:1rem">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg>
+          <a href="index.html#coleccion">Propiedades</a>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg>
+          <span id="crumb-title">Ficha</span>
+        </nav>
+      </div>
+
+      <div class="pd-gallery" id="pd-gallery"></div>
+
+      <div class="pd-layout">
+        <div class="pd-main">
+          <div class="pd-head">
+            <div>
+              <div id="pd-tags" style="display:flex;gap:.4rem;flex-wrap:wrap"></div>
+              <h1 class="pd-head__title" id="pd-title">Cargando propiedad…</h1>
+              <div class="pd-head__loc" id="pd-loc"></div>
+            </div>
+            <div class="pd-price">
+              <div class="pd-price__value" id="pd-price"></div>
+              <div class="pd-price__note" id="pd-note"></div>
+            </div>
+          </div>
+
+          <div class="spec-grid" id="pd-specs"></div>
+
+          <div class="prose">
+            <h2>Descripción</h2>
+            <p id="pd-desc"></p>
+          </div>
+
+          <div>
+            <h2 class="block-title">Amenidades</h2>
+            <div class="amenities" id="pd-amenities"></div>
+          </div>
+        </div>
+
+        <aside class="pd-aside">
+          <div class="agent-card">
+            <div class="agent-card__head">
+              <span class="agent-card__avatar">CN</span>
+              <div>
+                <div class="agent-card__name">César Martínez</div>
+                <div class="agent-card__role">Asesor inmobiliario · Depas ZMG</div>
+              </div>
+            </div>
+
+            <form class="agent-card__form" id="contact-form">
+              <input class="input" type="text" placeholder="Tu nombre" aria-label="Nombre" required>
+              <input class="input" type="tel" placeholder="Teléfono o WhatsApp" aria-label="Teléfono" required>
+              <textarea class="textarea" placeholder="Me interesa esta propiedad. ¿Podemos agendar una visita?" aria-label="Mensaje"></textarea>
+              <button class="btn btn--primary btn--block" type="submit">Solicitar información</button>
+              <p class="form-note">Al enviar aceptas ser contactado por un asesor. Sin costo ni compromiso.</p>
+            </form>
+
+            <div class="agent-card__contact">
+              <a class="btn btn--outline btn--sm" id="pd-whatsapp" href="#" target="_blank" rel="noopener">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.6A7.8 7.8 0 0 1 8.4 18.5L4 20l1.5-4.3A7.8 7.8 0 1 1 20 11.6Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+                WhatsApp
+              </a>
+              <a class="btn btn--outline btn--sm" href="tel:+524792761205">Llamar</a>
+            </div>
+          </div>
+
+          <div class="panel" style="padding:1rem 1.1rem">
+            <div class="admin-label" style="margin-bottom:.4rem">Nota del asesor</div>
+            <p style="font-size:12px;color:var(--ink-muted);line-height:1.6">
+              Las visitas se agendan de lunes a sábado. Puedo compartirte el expediente completo
+              —escrituras, predial y mantenimiento— antes de que decidas.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="similar">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">También te puede interesar</span>
+            <h2 class="section-head__title">Propiedades similares</h2>
+          </div>
+          <a class="section-head__link" href="index.html#coleccion">
+            Ver toda la colección
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="listing-grid" id="similar-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+        <span>© <span id="year">2026</span> Depas ZMG Inmobiliaria. Todos los derechos reservados.</span>
+        <span>
+          <a href="index.html">Inicio</a> · <a href="index.html#coleccion">Propiedades</a> ·
+          <a href="admin.html">Acceso administrador</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <div class="lightbox__bar">
+      <span id="lightbox-count">1 / 1</span>
+      <div class="lightbox__nav">
+        <button class="lightbox__btn" type="button" id="lightbox-prev" aria-label="Foto anterior">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="m14 6-6 6 6 6"/></svg>
+        </button>
+        <button class="lightbox__btn" type="button" id="lightbox-next" aria-label="Foto siguiente">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="m10 6 6 6-6 6"/></svg>
+        </button>
+        <button class="lightbox__btn" type="button" id="lightbox-close" aria-label="Cerrar galería">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="src/js/store.js"></script>
+  <script src="src/js/property.js"></script>
+</body>
+</html>
