@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inmobiliaria Premium - Dimorakot Style - Propiedades en renta y venta">
+  <meta name="keywords" content="inmobiliaria, propiedades, renta, venta, dimorakot, real estate">
+  <meta name="author" content="Proyecto Inmobiliario">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts dimorakot: Outfit + DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  
   <title>Inmobiliaria Premium - Dimorakot Style</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="src/styles/variables.css">
   <link rel="stylesheet" href="src/styles/base.css">
   <link rel="stylesheet" href="src/components/ui/button.css">
@@ -14,12 +25,6 @@
   <link rel="stylesheet" href="src/components/dashboard/dashboard.css">
   <link rel="stylesheet" href="src/components/banner/banner-manager.css">
   <link rel="stylesheet" href="src/components/public/public-page.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Fonts dimorakot: Outfit + DM Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  
 </head>
 <body>
 
@@ -46,7 +51,7 @@
           <a href="#" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary hover:bg-slate-50 rounded-full transition-colors">
             Publica tu propiedad
           </a>
-          <a href="#" class="inline-flex items-center gap-2 pl-3 py-2 border border-primary rounded-full text-sm font-medium text-primary hover:bg-primary-100 transition-all" id="admin-nav-link">
+          <a href="#" class="inline-flex items-center gap-2 pl-3 py-2 border border-primary rounded-full text-sm font-medium text-primary hover:bg-primary-100 transition-colors" id="admin-nav-link">
             <span class="material-symbols-outlined">admin_panel_settings</span>
             <span>Panel Admin</span>
           </a>
@@ -107,7 +112,7 @@
         </div>
       </section>
 
-      <!-- Sidebar fijo con precio y formulario -->
+      <!-- Sidebar fijo -->
       <aside class="sidebar-sticky">
         <div class="price-info">
           <span class="price-info__label">Renta mensual</span>
@@ -162,309 +167,151 @@
         </div>
       </nav>
 
-      <!-- Dashboard Header -->
-      <header class="dashboard-header">
-        <div class="dashboard-header__title">Panel de Control</div>
-        <div class="dashboard-header__stats">
-          <div class="dashboard-header__stat"><span class="dashboard-header__stat-value font-display">1,284</span> Propiedades</div>
-          <div class="dashboard-header__stat"><span class="dashboard-header__stat-value font-display">89</span> Disponibles</div>
-        </div>
-      </header>
+      <!-- Bienvenida -->
+      <section class="welcome-section">
+        <h2 class="welcome-section__greeting">Bienvenido, <span class="welcome-section__admin-name">Administrador</span></h2>
+        <p>Gestiona tu inmobiliaria profesional</p>
+      </section>
 
-      <!-- Banner Destacado para Header -->
-      <section class="banner-stats">
-        <div class="banner-stat">
-          <div class="banner-stat__number font-display">$38,500</div>
-          <div class="banner-stat__label">Oferta Destacada</div>
+      <!-- Resumen actividad -->
+      <section class="activity-summary">
+        <div class="summary-card">
+          <div class="summary-card__number" id="summary-total-properties">128</div>
+          <div class="summary-card__label">Propiedades Totales</div>
         </div>
-        <div class="banner-stat">
-          <div class="banner-stat__number">Activo</div>
-          <div class="banner-stat__label">Estado</div>
+        <div class="summary-card">
+          <div class="summary-card__number" id="summary-available">89</div>
+          <div class="summary-card__label">Disponibles</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card__number" id="summary-sold">23</div>
+          <div class="summary-card__label">Vendidas</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card__number" id="summary-rent">16</div>
+          <div class="summary-card__label">En Renta</div>
         </div>
       </section>
 
-      <section class="quick-nav">
-        <div class="quick-nav__title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Gestión de Banners
+      <!-- Indicadores -->
+      <section class="properties-indicators">
+        <div class="properties-indicators__filter">
+          <button class="properties-indicators__filter-btn properties-indicators__filter-btn--active" data-filter="all">Todo</button>
+          <button class="properties-indicators__filter-btn" data-filter="available">Disponible</button>
+          <button class="properties-indicators__filter-btn" data-filter="sold">Vendida</button>
+          <button class="properties-indicators__filter-btn" data-filter="rent">En Renta</button>
         </div>
-        <div class="quick-nav__list">
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">image</span>
-              <span>Todos los Banners</span>
-            </div>
-          </article>
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">star</span>
-              <span>Banners Destacados</span>
-            </div>
-          </article>
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">schedule</span>
-              <span>Fechas Programadas</span>
-            </div>
-          </article>
-        </div>
-      </section>
 
-      <!-- Filtros Avanzados -->
-      <section class="filters-advanced">
-        <div class="filters-advanced__section">
-          <span class="filters-advanced__section-title">Filtrar por</span>
-          <div class="filter-group">
-            <span class="filter-group__label">Estado</span>
-            <select class="filter-group__select" id="statusFilter">
-              <option value="all">Todos</option>
-              <option value="available">Disponible</option>
-              <option value="rent">En Renta</option>
-              <option value="sold">Vendida</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <span class="filter-group__label">Tipo</span>
-            <select class="filter-group__select" id="propertyType">
-              <option value="all">Todos</option>
-              <option value="house">Casa</option>
-              <option value="apartment">Departamento</option>
-              <option value="land">Terreno</option>
-            </select>
-          </div>
-        </div>
-        <div class="filters-advanced__section">
-          <span class="filters-advanced__section-title">Rango de Precio</span>
-          <div class="filter-group">
-            <span class="filter-group__label">Desde</span>
-            <input type="number" class="filter-group__select" placeholder="0" id="priceMin">
-            <span class="filter-group__label">hasta</span>
-            <input type="number" class="filter-group__select" placeholder="10000000" id="priceMax">
-          </div>
-        </div>
-      </section>
-
-      <!-- Estadísticas Detalladas -->
-      <section class="detailed-stats">
-        <div class="stat-card">
-          <div class="stat-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9 6l9-6l-9-6l-9 6z"/>
-              <path d="M3 12h25"/>
-              <path d="M3 15h9"/>
-              <path d="M3 18h17"/>
-            </svg>
-          </div>
-          <div class="stat-card__number" id="stat-total">1,284</div>
-          <div class="stat-card__label">Total Propiedades</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/><path d="M18 20v-7"/>
-            </svg>
-          </div>
-          <div class="stat-card__number" id="stat-available">89</div>
-          <div class="stat-card__label">Disponibles</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 3l2 14 2-14 3 9h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5l2-10z"/>
-            </svg>
-          </div>
-          <div class="stat-card__number" id="stat-sold">231</div>
-          <div class="stat-card__label">Vendidas</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l7 7v3"/>
-            </svg>
-          </div>
-          <div class="stat-card__number" id="stat-rent">87</div>
-          <div class="stat-card__label">En Renta</div>
-        </div>
-      </section>
-
-      <!-- Tabla Avanzada de Propiedades -->
-      <section class="advanced-table">
-        <table>
+        <table class="properties-table">
           <thead>
             <tr>
-              <th data-label="Propiedad">Propiedad</th>
-              <th data-label="Precio">Precio</th>
-              <th data-label="Estado">Estado</th>
-              <th data-label="Ubicación">Ubicación</th>
-              <th data-label="Acciones">Acciones</th>
+              <th>Propiedad</th>
+              <th>Precio</th>
+              <th>Estado</th>
+              <th>Ubicación</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Casa en Miami Beach</td>
-              <td class="price">$2,500,000</td>
-              <td><span class="status-dot status-dot--available"></span>Disponible</td>
-              <td>Miami Beach, FL</td>
-              <td>
-                <button class="btn btn-small btn-primary">Ver</button>
-                <button class="btn btn-small btn-secondary">Editar</button>
-              </td>
+              <td>$2,500,000</td>
+              <td><span class="badge badge--rent">Renta</span></td>
+              <td>Miami Beach</td>
+              <td><button class="btn btn-primary">Ver</button></td>
             </tr>
             <tr>
-              <td>Departamento en Madrid</td>
-              <td class="price">$450,000</td>
-              <td><span class="status-dot status-dot--sold"></span>Vendida</td>
-              <td>Madrid, España</td>
-              <td>
-                <button class="btn btn-small btn-secondary">Ver</button>
-                <button class="btn btn-small btn-alert">Historial</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Terreno en Santo Domingo</td>
-              <td class="price">$350,000</td>
-              <td><span class="status-dot status-dot--available"></span>Disponible</td>
-              <td>Santo Domingo, RD</td>
-              <td>
-                <button class="btn btn-small btn-primary">Ver</button>
-                <button class="btn btn-small btn-secondary">Detalles</button>
-              </td>
+              <td>Departamento Madrid</td>
+              <td>$450,000</td>
+              <td><span class="badge badge--sold">Vendida</span></td>
+              <td>Madrid</td>
+              <td><button class="btn btn-secondary">Ver</button></td>
             </tr>
           </tbody>
         </table>
       </section>
 
-      <!-- Gráficas de Resumen -->
-      <section class="charts-summary">
-        <div class="charts-summary__title">
-          <span>Gráficas Resumen</span>
+      <!-- Publicaciones destacadas -->
+      <section class="highlighted-publications">
+        <h3 class="highlighted-publications__title">Publicaciones Destacadas</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <article class="publication-card">
+            <div class="publication-card__info">
+              <h4 class="publication-card__title">Villa frente al mar</h4>
+              <p class="publication-card__meta">Publicado: 15 de enero | 4 habitaciones</p>
+            </div>
+            <div>
+              <span class="publication-card__badge badge badge--rent">Renta</span>
+            </div>
+            <div class="publication-card__actions">
+              <button class="btn btn-secondary">Editar</button>
+              <button class="btn btn-accent">Publicar</button>
+            </div>
+          </article>
+          <article class="publication-card">
+            <div class="publication-card__info">
+              <h4 class="publication-card__title">Departamento en el centro</h4>
+              <p class="publication-card__meta">Publicado: 12 de enero | 2 habitaciones</p>
+            </div>
+            <div>
+              <span class="publication-card__badge badge badge--urgent">Urgente</span>
+            </div>
+            <div class="publication-card__actions">
+              <button class="btn btn-secondary">Editar</button>
+              <button class="btn btn-accent">Publicar</button>
+            </div>
+          </article>
         </div>
-        <div class="charts-row">
-          <div class="chart-card">
-            <div class="chart-card__label">Propiedades por Tipo</div>
-            <canvas class="chart-card__canvas" id="chartPropertyType"></canvas>
+      </section>
+
+      <!-- Actividad administrativa -->
+      <section class="admin-activity">
+        <h3 class="admin-activity__title">Actividad Administrativa</h3>
+        <div class="admin-activity__item">
+          <div class="activity-item__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3l2 14 2-14 3 9h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5l2-10z"/>
+            </svg>
           </div>
-          <div class="chart-card">
-            <div class="chart-card__label">Estados del Mercado</div>
-            <canvas class="chart-card__canvas" id="chartMarketStatus"></canvas>
+          <div class="activity-item__details">
+            <span>Nueva propiedad agregada</span>
+            <span class="activity-item__timestamp">hace 10 minutos</span>
           </div>
         </div>
-        <div class="charts-row">
-          <div class="chart-card">
-            <div class="chart-card__label">Ingresos Mensuales</div>
-            <canvas class="chart-card__canvas" id="chartMonthlyIncome"></canvas>
+        <div class="admin-activity__item">
+          <div class="activity-item__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M18 20v-7"/>
+            </svg>
           </div>
-          <div class="chart-card">
-            <div class="chart-card__label">Propiedades por Ubicación</div>
-            <canvas class="chart-card__canvas" id="chartLocation"></canvas>
+          <div class="activity-item__details">
+            <span>Banner publicado exitosamente</span>
+            <span class="activity-item__timestamp">hace 25 minutos</span>
           </div>
         </div>
       </section>
 
-      <!-- Acciones Masivas -->
-      <section class="bulk-actions">
-        <div class="bulk-actions__title">
-          <span>Acciones Masivas</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="bulk-actions__toggle-icon">
-            <path d="M9 18l6-6-6-6m7.5-4.5l-3 3-3-3"/>
-          </svg>
-          <span>Seleccionar todas</span>
-          <input type="checkbox" class="bulk-actions__toggle-input" id="selectAll">
-          <span class="bulk-actions__toggle-slider"></span>
-        </div>
-        <div class="bulk-actions__list">
-          <div class="bulk-actions__item" data-action="delete">Eliminar seleccionados</div>
-          <div class="bulk-actions__item data-action="publish">Publicar seleccionados</div>
-          <div class="bulk-actions__item data-action="unpublish">Quitar publicación</div>
-        </div>
-        <div class="bulk-actions__select-all">
-          <input type="checkbox" id="selectAll" class="bulk-actions__toggle-input">
-          <label for="selectAll" class="text-sm text-slate-600 hover:text-primary transition-colors">Seleccionar todas</label>
-        </div>
-      </section>
-
-      <!-- Activity Feed -->
-      <section class="activity-feed">
-        <div class="activity-feed__header">
-          <span class="activity-feed__title">Actividad Reciente</span>
-          <div class="activity-feed__filter">
-            <button class="activity-feed__filter-btn activity-feed__filter-btn--active">Todo</button>
-            <button class="activity-feed__filter-btn">Publicaciones</button>
-            <button class="activity-feed__filter-btn">Propiedades</button>
-            <button class="activity-feed__filter-btn">Usuarios</button>
-          </div>
-        </div>
-        <div class="activity-feed__list" id="activityFeed">
-          <div class="activity-feed__item">
-            <div class="activity-feed__icon">
+      <!-- Accesos rápidos -->
+      <section class="quick-actions">
+        <h3 class="quick-actions__title">Accesos Rápidos</h3>
+        <div class="quick-actions__grid">
+          <article class="quick-action-card">
+            <div class="quick-action-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3l2 14 2-14 3 9h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5l2-10z"/>
+                <path d="M12 5v14M5 12h14"/>
               </svg>
             </div>
-            <div class="activity-feed__details">
-              <span>Nueva propiedad agregada: Casa en Miami Beach</span>
-              <span class="activity-feed__timestamp">hace 10 min</span>
-            </div>
-          </div>
-          <div class="activity-feed__item">
-            <div class="activity-feed__icon">
+            <h4 class="quick-action-card__title">Agregar Propiedad</h4>
+            <div class="quick-action-card__count">+12</div>
+          </article>
+          <article class="quick-action-card">
+            <div class="quick-action-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/><path d="M18 20v-7"/>
+                <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
               </svg>
             </div>
-            <div class="activity-feed__details">
-              <span>Banner publicado: Departamento en el Centro</span>
-              <span class="activity-feed__timestamp">hace 25 min</span>
-            </div>
-          </div>
-          <div class="activity-feed__item">
-            <div class="activity-feed__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l7 7v3"/>
-              </svg>
-            </div>
-            <div class="activity-feed__details">
-              <span>Propiedad vendida: Terreno en Santo Domingo</span>
-              <span class="activity-feed__timestamp">hace 1 hora</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quick Nav -->
-      <section class="quick-nav">
-        <div class="quick-nav__title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Accesos Rápidos
-        </div>
-        <div class="quick-nav__list">
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">apartment</span>
-              <span>Propiedades</span>
-            </div>
-          </article>
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">trending_up</span>
-              <span>Estadísticas</span>
-            </div>
-          </article>
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">people</span>
-              <span>Usuarios</span>
-            </div>
-          </article>
-          <article class="quick-nav__item">
-            <div class="quick-nav__item-link">
-              <span class="material-symbols-outlined">settings</span>
-              <span>Configuración</span>
-            </div>
+            <h4 class="quick-action-card__title">Publicar Banners</h4>
+            <div class="quick-action-card__count">+5</div>
           </article>
         </div>
       </section>
@@ -606,6 +453,40 @@
   <script>
     // Inicialización
     document.addEventListener('DOMContentLoaded', function() {
+      // Panel de Administración toggle
+      const adminNavLink = document.getElementById('admin-nav-link');
+      const publicPage = document.getElementById('public-page');
+      const dashboardSection = document.querySelector('.dashboard-main');
+      
+      if (adminNavLink && publicPage && dashboardSection) {
+        let isAdminMode = false;
+        
+        adminNavLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          isAdminMode = !isAdminMode;
+          
+          if (isAdminMode) {
+            publicPage.style.display = 'none';
+            dashboardSection.style.display = 'block';
+            adminNavLink.innerHTML = `
+              <span class="material-symbols-outlined">tips_and_updates</span>
+              <span>Modo Público</span>
+            `;
+            adminNavLink.style.borderColor = 'var(--color-accent-blue)';
+            adminNavLink.style.color = 'var(--color-accent-blue)';
+          } else {
+            publicPage.style.display = 'block';
+            dashboardSection.style.display = 'none';
+            adminNavLink.innerHTML = `
+              <span class="material-symbols-outlined">admin_panel_settings</span>
+              <span>Panel Admin</span>
+            `;
+            adminNavLink.style.borderColor = 'var(--color-primary)';
+            adminNavLink.style.color = 'var(--color-primary)';
+          }
+        });
+      }
+      
       // Inicializar carousel
       const carouselTrack = document.getElementById('carousel-track');
       if (carouselTrack) {
@@ -704,18 +585,6 @@
         avatar.style.color = 'var(--color-bg-primary)';
       });
 
-      // Tooltips simples
-      const tooltips = document.querySelectorAll('.tooltip');
-      tooltips.forEach(tooltip => {
-        tooltip.addEventListener('mouseover', function() {
-          const tooltipText = this.getAttribute('data-tooltip');
-          const tooltipEl = document.createElement('div');
-          tooltipEl.className = 'tooltip-text';
-          tooltipEl.textContent = tooltipText;
-          this.appendChild(tooltipEl);
-        });
-      });
-
       // WhatsApp CTA
       const whatsappCTA = document.querySelector('.whatsapp-cta');
       if (whatsappCTA) {
@@ -726,42 +595,6 @@
         });
       }
     });
-
-    // Panel de Administración
-    const adminNavLink = document.getElementById('admin-nav-link');
-    const publicPage = document.getElementById('public-page');
-    const dashboardSection = document.querySelector('.dashboard-main');
-    
-    if (adminNavLink && publicPage && dashboardSection) {
-      let isAdminMode = false;
-      
-      adminNavLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        isAdminMode = !isAdminMode;
-        
-        if (isAdminMode) {
-          // Cambiar a modo administrador
-          publicPage.style.display = 'none';
-          dashboardSection.style.display = 'block';
-          adminNavLink.innerHTML = `
-            <span class="material-symbols-outlined">tips_and_updates</span>
-            <span>Modo Público</span>
-          `;
-          adminNavLink.style.borderColor = 'var(--color-accent-blue)';
-          adminNavLink.style.color = 'var(--color-accent-blue)';
-        } else {
-          // Regresar modo público
-          publicPage.style.display = 'block';
-          dashboardSection.style.display = 'none';
-          adminNavLink.innerHTML = `
-            <span class="material-symbols-outlined">admin_panel_settings</span>
-            <span>Panel Admin</span>
-          `;
-          adminNavLink.style.borderColor = 'var(--color-primary)';
-          adminNavLink.style.color = 'var(--color-primary)';
-        }
-      });
-    }
-</script>
+  </script>
 </body>
 </html>
